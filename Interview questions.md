@@ -87,4 +87,3 @@ Assign the safety score as follows:
 &emsp; **TTC**: int, 0, 50, 100\
 &emsp; &emsp; time to collision score 
 
-
