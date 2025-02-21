@@ -1,5 +1,9 @@
 # Interview questions
 
+### Create a folder of your name and submit files of your answers here: https://tinyurl.com/cdasimquestion
+<img src="cdasimquestionlink.png" alt="drawing" width="150"/>
+
+
 ### Question 1:
 Suppose we developed a traffic simulation software where we can simulate vehicle movements at a signalized intersection. Now suppose we want to introduce a new feature to add **pedestrians** crossing simulation at traffic lights and interacting with vehicles realistically. 
 - Suppose we will develop a new module to model pedestrian behavior. What functions should be included in this module?
@@ -30,7 +34,7 @@ The test script for this problem is `Question3_TestScript.py`. We have the assum
 | Fuel efficiency (MPG) | 40 | 15 | 10 |
 
 ***
-### Two methods:
+### Two methods (If short of time, you can select to complete only one of the two methods)
 #### **1. `get_next_speed(current_speed, current_headway)` - Car-Following Model to determine its speed**  
 Your task is to implement this `get_next_speed` function which updates the vehicle's speed. The $current\_acceleration$ is updated based on equation below:
 
