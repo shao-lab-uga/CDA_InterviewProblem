@@ -44,17 +44,17 @@ class Vehicle:
         :param relative_speed: Speed difference with the leading vehicle (m/s), can be float or numpy array
         :return: Safety score (0, 50, 100), same type as inputs
         """
-        # No risk if not approaching
-        score = np.where(relative_speed <= 0, 100, 0)
-
+        
         # Compute TTC where relative_speed > 0
         ttc = np.divide(headway, relative_speed, where=relative_speed>0)
 
         # Assign safety scores
-        score = np.where(ttc > 3, 100, score)
+        score = np.where(ttc > 3, 100, 0)
         score = np.where((ttc >= 1) & (ttc <= 3), 50, score)
-        score = np.where(ttc < 1, 0, score)
 
+        score = np.where(ttc < 1, 0, score)
+        # No risk if not approaching, relative_speed <= 0 then score = 100
+        score = np.where(relative_speed <= 0, 100, score)
         return score
 
 
